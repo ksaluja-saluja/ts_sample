@@ -37,3 +37,36 @@ const empAddress: Address = {
     country: 'AU'
 }
 
+/*** TYPES */
+type PhoneNumber = {
+    landline: string,
+    mobile: string
+}
+
+//cannot declare duplicate type
+// type PhoneNumber = {
+//      fax: string
+// }
+
+const empPhoneNumber: PhoneNumber = {
+    landline: '123456',
+    mobile: '123456'
+}
+
+/*** Unions */
+const employeeId: string | number = 1234
+
+/**** CLASSES */
+class Book {
+    private name: string;
+    constructor(name: string) {
+        this.name = name
+    }
+
+    public greeting(): string {
+        return `Book Name: ${this.name}`
+    }
+}
+
+const bookObj = new Book('Harry Potter');
+console.log(bookObj.greeting());

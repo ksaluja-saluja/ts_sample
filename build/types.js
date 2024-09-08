@@ -23,3 +23,14 @@ function func1() {
 function func2() {
     throw new Error('error here');
 }
+/*** ARRAY */
+// array or tuple can be readonly but not scalar types (e.g. string or number)
+const str = ['first', 'second'];
+// can not push into readonly array
+// str.push('third')
+/**** TUPLE */
+// Tuple is fixed item array, e.g. below can contain only two values - first as number and second as string
+// Typescript doesn't throw error if another item is pushed (line 41) but it will throw error when try to access it
+const str1 = [1, 'first'];
+str1.push(2, 'second');
+//console.log('VALUES', str1[2])
